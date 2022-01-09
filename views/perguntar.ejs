@@ -1,0 +1,28 @@
+<%- include('partials/header.ejs') %> 
+    <%- include ('partials/navbar.ejs') %> 
+    <div class="col-md-6 mx-auto">
+        <h1 class="my-5">Fazer pergunta</h1>
+        <form action="/salvar-pergunta" method="POST">
+            <div class="form-floating mb-3">
+                <input 
+                    name="titulo"
+                    type="text" 
+                    class="form-control" 
+                    id="titulo" 
+                    placeholder="Título">
+                <label for="titulo">Título</label>
+            </div>
+            <div class="form-floating mb-3">
+                <textarea 
+                    name="descricao"
+                    class="form-control" 
+                    id="descricao" 
+                    placeholder="Dê mais detalhes da sua pergunta"></textarea>
+                <label for="descricao">Descrição</label>
+            </div>
+            <div class="d-flex justify-content-end">
+                <button class="btn btn-dark px-5 py-3">Perguntar</button>
+            </div>
+        </form>
+    </div>
+<%- include('partials/footer.ejs') %>
